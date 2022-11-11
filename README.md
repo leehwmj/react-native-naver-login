@@ -76,7 +76,7 @@ cd ios && pod install
 
 주의할 점은 다음과 같습니다.
 
-- 네이버 개발자 콘솔에 기입한 `URL Scheme`와 동일해야 합니다.
+- 네이버 개발자 콘솔에 기입한 `URL Scheme`와 동일해야 합니다. 앱스토어에 등록 된 다운로드URL이 없을 시 임의의 URL 등록 가능합니다 (예: 블로그 URL, 홈페이지 URL)
 - `login` 함수 호출시에 `serviceUrlScheme` 로 동일하게 전달해주어야 합니다.
 - TODO 설명 및 이미지 추가
 
@@ -98,9 +98,10 @@ cd ios && pod install
 </array>
 ```
 
+![스크린샷 2022-11-11 오후 3 00 57](https://user-images.githubusercontent.com/22087964/201274151-50e9d32c-8a94-4a8a-ace8-81f02a28e6ef.png)
 ![image](https://user-images.githubusercontent.com/33388801/196835050-3d887f3c-1d07-4be3-a2cf-27ed18a48691.png)
 
-#### 3. `AppDelegate`의 `application:openURL:options` 에서 URL 핸들링 로직 추가
+#### 3. `AppDelegate.m`의 `application:openURL:options` 에서 URL 핸들링 로직 추가
 
 네이버 로그인이 성공한 후 우리앱으로 다시 돌아와 URL을 처리하기 위해 필요한 과정입니다.
 
